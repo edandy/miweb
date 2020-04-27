@@ -1,7 +1,7 @@
 <template>
 	<header id="site_header" class="header mobile-menu-hide">
         <div class="my-photo">
-          	<img src="https://scontent.flim13-1.fna.fbcdn.net/v/t1.0-9/20526120_1449665758432050_5820139003143908280_n.jpg?_nc_cat=105&_nc_ht=scontent.flim13-1.fna&oh=7b942297fb27ae065c6e91698d093e23&oe=5D90D331" alt="image">
+          	<img src="/web/images/dandy.jpg" alt="image">
           	<div class="mask"></div>
         </div>
 

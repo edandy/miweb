@@ -35,7 +35,8 @@ export default {
             { src: 'web/js/owl.carousel.min.js' },
             { src: 'web/js/jquery.magnific-popup.min.js' },
             { src: 'web/js/jquery.hoverdir.js' },
-            { src: 'web/js/main.js' }
+            { src: 'web/js/main.js' },
+            { src: 'web/js/sendForm.js' }
         ]
     },
 

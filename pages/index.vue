@@ -26,8 +26,8 @@
 		            <ul class="info-list">
 						<li><span class="title">Profesión</span><span class="value">Ing. de Sistema</span></li>
 						<li><span class="title">Dirección</span><span class="value">Calle Neptuno 177, San Roque - Santiago de Surco</span></li>
-						<li><span class="title">Email</span><span class="value"><a href="#"><span class="__cf_email__">info@dandyperez.com</span></a></span></li>
-						<li><span class="title">Celular</span><span class="value">+51 955 182 873</span></li>
+						<li><span class="title">Email</span><span class="value"><a href="#"><span class="__cf_email__">edandy.perez@gmail.com</span></a></span></li>
+						<li><span class="title">Celular</span><span class="value">+51 955 106 414</span></li>
 						<li><span class="title">Freelance</span><span class="value available">Disponible</span></li>
 		            </ul>
 	          	</div>

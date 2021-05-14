@@ -25,7 +25,7 @@
                         <i class="pe-7s-icon pe-7s-mail"></i>
                     </div>
                     <div class="ci-text">
-                        <h5><a href="mailto:edandy.perez@gmail.com" class="__cf_email__">info@dandyperez.com</a></h5>
+                        <h5><a href="mailto:edandy.perez@gmail.com" class="__cf_email__">edandy.perez@gmail.com</a></h5>
                     </div>
                 </div>
                 <div class="contact-info-block">
@@ -33,7 +33,7 @@
                         <i class="pe-7s-icon pe-7s-call"></i>
                     </div>
                     <div class="ci-text">
-                        <h5>+51 955 182 873</h5>
+                        <h5>+51 955 106 414</h5>
                     </div>
                 </div>
                 <div class="contact-info-block">
@@ -50,39 +50,38 @@
                 <div class="block-title">
                     <h3>Escríbeme</h3>
                 </div>
-                <form id="contact-form" method="post">
+                <form id="formapidandylead" class="formapidandylead">
                     <div class="messages"></div>
-
                     <div class="controls">
                         <div class="form-group">
-                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Nombres" required="required" data-error="Name is required.">
+                            <input id="form_name" type="text" v-model="lead.name" name="name" class="form-control" placeholder="Nombres" data-error="Name is required.">
                             <div class="form-control-border"></div>
                             <i class="form-control-icon fa fa-user"></i>
                             <div class="help-block with-errors"></div>
                         </div>
 
                         <div class="form-group">
-                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Email" required="required" data-error="Valid email is required.">
+                            <input id="form_email" type="email" v-model="lead.email" name="email" class="form-control" placeholder="Email" data-error="Valid email is required.">
                             <div class="form-control-border"></div>
                             <i class="form-control-icon fa fa-envelope"></i>
                             <div class="help-block with-errors"></div>
                         </div>
 
                         <div class="form-group">
-                            <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Teléfono" required="required" data-error="El teléfono es requerido.">
+                            <input id="form_phone" type="tel" v-model="lead.phone" name="phone" class="form-control" placeholder="Teléfono" data-error="El teléfono es requerido.">
                             <div class="form-control-border"></div>
                             <i class="form-control-icon fa fa-envelope"></i>
                             <div class="help-block with-errors"></div>
                         </div>
 
                         <div class="form-group">
-                            <textarea id="form_message" name="message" class="form-control" placeholder="Mensaje" rows="4" required="required" data-error="Please, leave me a message."></textarea>
+                            <textarea id="form_message" v-model="lead.message" name="message" class="form-control" placeholder="Mensaje" rows="4" data-error="Please, leave me a message."></textarea>
                             <div class="form-control-border"></div>
                             <i class="form-control-icon fa fa-comment"></i>
                             <div class="help-block with-errors"></div>
                         </div>                    
 
-                        <button type="submit" class="button btn-send">Enviar</button>
+                        <button type="submit" class="button btn-send" @click.prevent="sendForm">Enviar</button>
                     </div>
                 </form>
             </div>
@@ -90,3 +89,30 @@
     </section>
   <!-- End Contact Subpage -->
 </template>
+
+<script>
+import axios from "axios";
+export default {
+    data () {
+        return {
+            lead: {
+                name: '',
+                lastname: '',
+                email: '',
+                phone: ''
+            }
+        }
+    },
+    methods: {
+        sendForm() {
+            axios.post('http://localhost:4000/lead/create', {datos: this.lead})
+            . then ((res) => {
+                console.log('res::: ', res);
+            })
+            . catch ((err) => {
+                console.log('err:::: ', err);
+            })
+        }
+    }
+}
+</script>

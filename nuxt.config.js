@@ -1,5 +1,5 @@
-import pkg from './package'
-import webpack from 'webpack'
+// import pkg from './package'
+// import webpack from 'webpack'
 require("dotenv").config();
 export default {
     mode: 'universal',

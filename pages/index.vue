@@ -9,6 +9,9 @@
           		<h2>Dandy Pérez</h2>
           		<div id="rotate" class="text-rotate">
 		            <div>
+		              <p class="home-page-description">Full Stack Developer</p>
+		            </div>
+					<div>
 		              <p class="home-page-description">Web Designer</p>
 		            </div>
 		            <div>

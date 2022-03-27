@@ -1,5 +1,5 @@
 <template>
-	<header id="site_header" class="header mobile-menu-hide">
+	<header id="site_header" class="header mobile-menu-hide" ref="sidebar">
         <div class="my-photo">
           	<img src="/web/images/dandy.jpg" alt="image">
           	<div class="mask"></div>
@@ -7,7 +7,7 @@
 
         <div class="site-title-block">
           	<h1 class="site-title">Dandy Pérez</h1>
-          	<p class="site-description">Web Developer</p>
+          	<p class="site-description">Full Stack Developer</p>
         </div>
 
         <!-- Navigation & Social buttons -->
@@ -18,10 +18,10 @@
 	              <nuxt-link to="/" @click.native="rotateText">Inicio</nuxt-link>
 	            </li>
 	            <li>
-	              <nuxt-link to="/sobre-mi">Sobre mi</nuxt-link>
+	              <nuxt-link to="/sobre-mi" @click.native="closeSidebar">Sobre mi</nuxt-link>
 	            </li>
 	            <li>
-	              <nuxt-link to="/perfil" @click.native="addClassJs">Mi perfil</nuxt-link>
+	              <nuxt-link to="/perfil" @click.native="closeSidebar">Mi perfil</nuxt-link>
 	            </li>
 	            <!-- <li>
 	              <nuxt-link to="/portafolio">Portafolio</nuxt-link>
@@ -30,7 +30,7 @@
 	              <nuxt-link to="/blog">Blog</nuxt-link>
 	            </li> -->
 	            <li>
-	              <nuxt-link to="/contactame">Contáctame</nuxt-link>
+	              <nuxt-link to="/contactame" @click.native="closeSidebar">Contáctame</nuxt-link>
 	            </li>
           	</ul>
           	<!-- /Main menu -->
@@ -54,6 +54,7 @@
 	export default{
 		methods: {
 			rotateText() {
+				this.closeSidebar()
 				setTimeout(function(){
 					$.fn.extend({rotaterator:function(options){var defaults={fadeSpeed:500,pauseSpeed:100,child:null};
 					var options=$.extend(defaults,options);return this.each(function(){var o=options;var obj=$(this);var items=$(obj.children(),obj);items.each(function(){$(this).hide();});if(!o.child){var next=$(obj).children(':first');}else{var next=o.child;}
@@ -65,6 +66,9 @@
 			addClassJs() {
 				/*$('.pt-page').addClass('js');
 				$('.pt-page .skill-percentage').css('width', 0);*/
+			},
+			closeSidebar() {
+				this.$refs.sidebar.classList.add('mobile-menu-hide')
 			}
 		}
 	}

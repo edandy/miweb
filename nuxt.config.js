@@ -67,8 +67,6 @@ export default {
       // Doc: https://axios.nuxtjs.org/usage
       '@nuxtjs/axios',
       '@nuxtjs/dotenv',
-      // Simple usage
-      'nuxt-trailingslash-module',
     ],
   /*
   ** Axios module configuration

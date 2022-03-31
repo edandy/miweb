@@ -5492,11 +5492,6 @@ num2fraction@^1.2.2:
   resolved "https://registry.yarnpkg.com/num2fraction/-/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
   integrity sha1-b2gragJ6Tp3fpFZM0lidHU5mnt4=
 
-nuxt-trailingslash-module@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/nuxt-trailingslash-module/-/nuxt-trailingslash-module-1.2.0.tgz#5c046a2911cc99ed50681c3d03248b756ea99421"
-  integrity sha512-R8YA7LEGQASfU6xGalJ2vah16TgYYCP9HoY8Gp+hDWzTqSuXbMOL3kJoD9dOjXoxruEW4ysz7teSLtwS5zB5Ew==
-
 nuxt@^2.4.0:
   version "2.15.8"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-2.15.8.tgz#946cba46bdaaf0e3918aa27fd9ea0fed8ed303b0"

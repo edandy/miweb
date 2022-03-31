@@ -75,9 +75,9 @@ export default {
         // See https://github.com/nuxt-community/axios-module#options
     },
     
-    router: {
-      trailingSlash: false,
-    },     
+    // router: {
+    //   trailingSlash: false,
+    // },     
   /*
   ** Build configuration
   */

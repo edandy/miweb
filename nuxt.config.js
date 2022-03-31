@@ -64,9 +64,11 @@ export default {
   ** Nuxt.js modules
   */
     modules: [
-        // Doc: https://axios.nuxtjs.org/usage
-        '@nuxtjs/axios',
-        "@nuxtjs/dotenv"
+      // Doc: https://axios.nuxtjs.org/usage
+      '@nuxtjs/axios',
+      '@nuxtjs/dotenv',
+      // Simple usage
+      'nuxt-trailingslash-module',
     ],
   /*
   ** Axios module configuration
@@ -77,15 +79,7 @@ export default {
     
     router: {
       trailingSlash: false
-    },
-    
-    redirect: [{
-      from: '^/(.*)/$',
-      to: (from, req) => {
-        let trailingUrl = req.url.endsWith('/') ? req.url.slice(0, -1) : req.url
-        return trailingUrl
-      },
-    }],
+    },     
   /*
   ** Build configuration
   */

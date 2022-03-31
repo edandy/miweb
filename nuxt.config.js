@@ -78,6 +78,14 @@ export default {
     router: {
       trailingSlash: false
     },
+    
+    redirect: [{
+      from: '^/(.*)/$',
+      to: (from, req) => {
+        let trailingUrl = req.url.endsWith('/') ? req.url.slice(0, -1) : req.url
+        return trailingUrl
+      },
+    }],
   /*
   ** Build configuration
   */

@@ -77,7 +77,6 @@ export default {
     
     router: {
       trailingSlash: false,
-      middleware: 'redirect'
     },     
   /*
   ** Build configuration

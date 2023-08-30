@@ -113,7 +113,7 @@ export default {
         sendForm() {
             this.setErrors({})
             this.loadingBtn = true;
-            this.$store.dispatch('contact/sendForm', {data: this.lead})
+            this.$store.dispatch('contact/sendForm', this.lead)
             .then(() => {
                 this.cleanFields()
                 this.message = 'Sus datos fueron enviados correctamente.'

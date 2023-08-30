@@ -54,10 +54,10 @@
                     <div class="messages"></div>
                     <div class="controls">
                         <div class="form-group">
-                            <input id="form_name" type="text" v-model="lead.fullname" name="fullname" class="form-control" placeholder="Nombres" data-error="Name is required.">
+                            <input id="form_name" type="text" v-model="lead.name" name="name" class="form-control" placeholder="Nombres" data-error="Name is required.">
                             <div class="form-control-border"></div>
                             <i class="form-control-icon fa fa-user"></i>
-                            <div class="help-block with-errors" v-if="validationField('fullname')">{{ validationField('fullname') }}</div>
+                            <div class="help-block with-errors" v-if="validationField('name')">{{ validationField('name') }}</div>
                         </div>
 
                         <div class="form-group">
@@ -71,7 +71,7 @@
                             <input id="form_phone" type="tel" v-model="lead.phone" name="phone" class="form-control" placeholder="Teléfono" data-error="El teléfono es requerido.">
                             <div class="form-control-border"></div>
                             <i class="form-control-icon fa fa-phone"></i>
-                            <div class="help-block with-errors" v-if="validationField('phone')">{{ validationField('phone') }}</div>                            
+                            <div class="help-block with-errors" v-if="validationField('phone')">{{ validationField('phone') }}</div>
                         </div>
 
                         <div class="form-group">
@@ -80,9 +80,9 @@
                             <i class="form-control-icon fa fa-comment"></i>
                             <div class="help-block with-errors" v-if="validationField('message')">{{ validationField('message') }}</div>
                         </div>
-                        
+
                         <button type="submit" class="button btn-send" @click.prevent="sendForm"
-                            :disabled="loadingBtn">Enviar</button>                        
+                            :disabled="loadingBtn">Enviar</button>
 
                         <p class="help-block" v-if="message">{{ message }}</p>
                     </div>
@@ -99,7 +99,7 @@ export default {
     data () {
         return {
             lead: {
-                fullname: '',
+                name: '',
                 email: '',
                 phone: '',
                 message: ''
@@ -121,12 +121,12 @@ export default {
             .catch ((err) => {
                 console.log('err => ', err)
             })
-            .finally(() => {            
+            .finally(() => {
                 this.loadingBtn = false;
             })
         },
         cleanFields() {
-            this.lead.fullname = ''
+            this.lead.name = ''
             this.lead.email = ''
             this.lead.phone = ''
             this.lead.message = ''

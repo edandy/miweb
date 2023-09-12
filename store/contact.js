@@ -9,7 +9,7 @@ export const getters = {
 export const actions = {
   async sendForm(_, params) {
     try {
-      const res = await this.$axios.post(api + '/contacts/store', params)
+      const res = await this.$axios.post(api + '/leads/store', params)
       if(res.status === 200) return Promise.resolve(res);
     } catch (err) {
       return Promise.reject(err);

@@ -12,7 +12,10 @@ export default {
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'description', content: 'Desarrollo de aplicaciones web, páginas administrables, tiendas, pasarelas de pagos, aplicaciones moviles, apps' }
+            { hid: 'description', name: 'description', content: 'Desarrollo de aplicaciones web, páginas administrables, tiendas, pasarelas de pagos, aplicaciones moviles, apps' },
+            {
+                name: 'facebook-domain-verification', content: 'zh826w614ecv4ll8myiklrtztrr7z0'
+            }
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -57,7 +60,7 @@ export default {
   */
     plugins: [
       '~/plugins/axios',
-      // '~/plugins/formValidation',      
+      // '~/plugins/formValidation',
     ],
 
   /*
@@ -74,10 +77,10 @@ export default {
     axios: {
         // See https://github.com/nuxt-community/axios-module#options
     },
-    
+
     // router: {
     //   trailingSlash: false,
-    // },     
+    // },
   /*
   ** Build configuration
   */
